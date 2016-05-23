@@ -219,7 +219,7 @@ class InstallModxCommand extends BaseCommand {
       $managerPass = $helper->ask($this->input, $this->output, $question);
     } else {
       $this->output->writeln("Manager Password: " . $managerPass);
-      validatePass($managerPass);
+      call_user_func(array(__NAMESPACE__ . "\InstallModxCommand", "validatePass"), $managerPass);
     }
 
     if ('generate' == $managerPass) {
