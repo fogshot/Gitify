@@ -236,7 +236,7 @@ class InstallModxCommand extends BaseCommand {
 
     $configXMLContents = "<modx>
             <database_type>mysql</database_type>
-            <database_server>localhost</database_server>
+            <database_server>{$host}</database_server>
             <database>{$dbName}</database>
             <database_user>{$dbUser}</database_user>
             <database_password>{$dbPass}</database_password>
